@@ -22,7 +22,7 @@ SpacesInCStyleCastParentheses: 'false'
 SpacesInContainerLiterals: 'false'
 SpacesInParentheses: 'false'
 SpacesInSquareBrackets: 'false'
-TabWidth: '8'
+TabWidth: '4'
 UseTab: ForIndentation
 
 ...
