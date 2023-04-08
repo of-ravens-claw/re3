@@ -2310,6 +2310,12 @@ WinMain(HINSTANCE instance,
 							++gGameState;
 						else if ( CPad::GetPad(0)->GetTabJustDown() )
 							++gGameState;
+					        else if ( CPad::GetPad(0)->GetCrossJustDown() )
+						        ++gGameState;
+					        else if(CPad::GetPad(0)->GetCircleJustDown())
+						        ++gGameState;
+					        else if(CPad::GetPad(0)->GetStartJustDown())
+						        ++gGameState;
 
 						break;
 					}
@@ -2350,6 +2356,12 @@ WinMain(HINSTANCE instance,
 							++gGameState;
 						else if ( CPad::GetPad(0)->GetTabJustDown() )
 							++gGameState;
+					        else if (CPad::GetPad(0)->GetCrossJustDown())
+						        ++gGameState;
+					        else if(CPad::GetPad(0)->GetCircleJustDown())
+						        ++gGameState;
+					        else if(CPad::GetPad(0)->GetStartJustDown())
+						        ++gGameState;
 
 						break;
 					}
