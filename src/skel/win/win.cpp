@@ -2310,12 +2310,10 @@ WinMain(HINSTANCE instance,
 							++gGameState;
 						else if ( CPad::GetPad(0)->GetTabJustDown() )
 							++gGameState;
-					        else if ( CPad::GetPad(0)->GetCrossJustDown() )
-						        ++gGameState;
-					        else if(CPad::GetPad(0)->GetCircleJustDown())
-						        ++gGameState;
-					        else if(CPad::GetPad(0)->GetStartJustDown())
-						        ++gGameState;
+#ifdef FIX_BUGS
+						else if (CPad::GetPad(0)->NewState.CheckForInput())
+							++gGameState;
+#endif
 
 						break;
 					}
@@ -2356,12 +2354,10 @@ WinMain(HINSTANCE instance,
 							++gGameState;
 						else if ( CPad::GetPad(0)->GetTabJustDown() )
 							++gGameState;
-					        else if (CPad::GetPad(0)->GetCrossJustDown())
-						        ++gGameState;
-					        else if(CPad::GetPad(0)->GetCircleJustDown())
-						        ++gGameState;
-					        else if(CPad::GetPad(0)->GetStartJustDown())
-						        ++gGameState;
+#ifdef FIX_BUGS
+						else if (CPad::GetPad(0)->NewState.CheckForInput())
+							++gGameState;
+#endif
 
 						break;
 					}
